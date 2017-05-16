@@ -74,106 +74,23 @@ else:
 本期思考题：
 
 ```python
-
 # 自然数集中，由小到大，
 # 2是第一个质数，3是第二个质数，5是第三个质数，
 # 依此类推，11是第五个质数。
 # 请编写一个程序，找出第100个质数
 
-```
-
-上期思考题：
-
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViaoykQGRdQAb1gdTNGcxeYCtdavOWaSN6UcelyjURXCyibyRIMoiaKhC3Zg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
-
-上期思考题解答：
-
-```python
-# 判定质数
-# 思路：以35为例，只要找到一个数可以被35整除，
-#      并且这个数不是1也不是35，那么35就不是质数
-number = 35
-for index in range(2,number):
-    if number%index == 0 and index != number:
-        print("It is not a prime number.")
-        break
-    index = index + 1
-else:
-    print("It is a prime number.")
-```
-
-```python
-# 找出1~100之间的所有质数
-# 思路：2~100之间，每个数都判定一下是否是质数
-#      如果是质数则输出
-for number in range(2,100):
-    # num统计了除1和本身外，能被整除的数的个数
-    # 如果个数为0，就是质数
-    num = 0
+num = 1
+number = 2
+while num <= 100:
     for index in range(2,number):
-        if number%index == 0:
-            num = num + 1
-    if num == 0:
-        print(number)
+        if number%index == 0 and index != number:
+            break
+        index = index + 1
+    else:
+        # print(num, number)
+        num = num + 1
+    number = number + 1
+print(number-1)
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# python的while循环语句
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print()语句可以用来调试代码，使用`print(num, number)`可以帮助我们知晓质数的编号。

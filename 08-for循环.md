@@ -120,29 +120,29 @@ else:
 # 4不是质数，它可以被1、2和4整除
 # 1.请编写一个程序判定一个数是否是质数
 # 2.请编写一个程序找出1~100之间的所有质数
-```
 
-上期答案：
+# 1.判定质数
+# 思路：以35为例，只要找到一个数可以被35整除，
+#      并且这个数不是1也不是35，那么35就不是质数
+number = 35
+for index in range(2,number):
+    if number%index == 0 and index != number:
+        print("It is not a prime number.")
+        break
+    index = index + 1
+else:
+    print("It is a prime number.")
 
-```python
-# 假设分数为score，分数的取值范围是0~100
-# 分数大于或等于90为优
-# 分数小于90但大于或等于75为良
-# 分数小于75但大于或等于60为中
-# 分数小于60为差
-# 请编写一个程序判断优良中差
-```
-
-上期问题解答：
-
-```python
-# 参考答案
-if score >= 90 and score <= 100:
-    print("优")
-elif score >= 75 and score < 90:
-    print("良")
-elif score >= 60 and score < 75:
-    print("中")
-elif score >=0 and score < 60:
-    print("差")
+# 2.找出1~100之间的所有质数
+# 思路：2~100之间，每个数都判定一下是否是质数
+#      如果是质数则输出
+for number in range(2,100):
+    # num统计了除1和本身外，能被整除的数的个数
+    # 如果个数为0，就是质数
+    num = 0
+    for index in range(2,number):
+        if number%index == 0:
+            num = num + 1
+    if num == 0:
+        print(number)
 ```
