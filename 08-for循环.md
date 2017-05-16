@@ -146,3 +146,6 @@ for number in range(2,100):
     if num == 0:
         print(number)
 ```
+
+**扫一扫这个二维码，关注公众号：聪哥python，获取最新python3基础教程**
+![聪哥python](http://opa63tcx6.bkt.clouddn.com/qrcode%E8%81%AA%E5%93%A5python.jpg)
