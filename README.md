@@ -3,9 +3,9 @@
 python基础教程
 
 ## 目录
-1. [前言](https://github.com/zhancongc/conggepython/1-前言.md)
-2. [安装](https://github.com/zhancongc/conggepython/2-安装.md)
-3. [数字和字符串](https://github.com/zhancongc/conggepython/3-数字和字符串.md)
+1. [前言](https://github.com/zhancongc/conggepython/blob/master/1-%E5%89%8D%E8%A8%80.md)
+2. [安装](https://github.com/zhancongc/conggepython/blob/master/2-%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85python.md)
+3. [数字和字符串](https://github.com/zhancongc/conggepython/blob/master/3-%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2.md)
 4. [列表](https://github.com/zhancongc/conggepython/4-列表.md)
 5. [元组和字典](https://github.com/zhancongc/conggepython/5-元组和字典.md)
 6. [运算符](https://github.com/zhancongc/conggepython/6-运算符.md)
