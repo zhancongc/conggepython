@@ -1,0 +1,60 @@
+# 如何安装python?
+
+> python具有跨平台的特性，因此它可以在运行在windows和各种Linux/UNIX系统上。由于系统的差异，安装python的方式也略有不同。本文重点介绍了windows平台下的python安装方法，适用于python初学者。
+
+大多数新手还是用的windows系统的电脑，下面聪哥介绍windows平台下，python的安装方式[[1]](附注)。
+
+## 众里寻他千百度——下载安装包
+
+![python版本](http://opa63tcx6.bkt.clouddn.com/pictures/python361%E5%AE%89%E8%A3%85%E5%8C%85.png)
+
+点击这个链接：[https://www.python.org/downloads/](https://www.python.org/downloads/)，来到上图所示的页面，选择最新版本的python安装包，聪哥此时安装的时候，最新版本是python3.6.1。
+
+![python361win](http://opa63tcx6.bkt.clouddn.com/pictures/python361win.png)
+
+随后我们来到这个页面：[https://www.python.org/downloads/release/python-361/](https://www.python.org/downloads/release/python-361/)，选择Windows x86-64 executable installer这个包[[1]](参考资料)，因为它已经集成了pip和一些其它必要的库。如果是Mac平台，则选择Mac OS X 64-bit/32-bit installer。
+
+由于python的安装包需要从国外下载，下载速度不一定令人满意，聪哥将windows的官方安装包放到了七牛云上面，又需要的同学可以点击下面的链接下载。[[http://opa63tcx6.bkt.clouddn.com/installer/python-3.6.1-amd64.exe]](http://opa63tcx6.bkt.clouddn.com/installer/python-3.6.1-amd64.exe)
+
+## 人生之若如初见——体验命令行
+
+打开python的安装包，选择快速安装即可。在python2时代，还需要再安装pip包管理工具。由于我们明智地选择了python3，pip在我们安装python的时候就已经自动安装好了。
+
+到这一步为止，python就算基本安装完毕了。下面可以初步体验一下python：
+
+![python command](http://opa63tcx6.bkt.clouddn.com/pictures/open_command.jpg)
+
+点击图中的命令提示符，打开windows命令行。输入python，即可切换到python命令行[[2]](附注)。注意：windows的命令行每行以`>`结尾，而python的命令行以`>>>`开头。
+
+![hello world](http://opa63tcx6.bkt.clouddn.com/pictures/helloworld.png)
+
+
+
+下面是一个每个新手都要完成的仪式，在命令行中输入`print('Hello, world!')`，输入`exit()`即可退出怎么样，是不是满满的成就感？
+
+## 小试牛刀——安装交互式命令行ipython
+
+前面聪哥提到了pip是个包管理工具，是不是到现在一点概念都没有？没关系，聪哥现在就带你揭开她的面纱。
+
+![ipython](http://opa63tcx6.bkt.clouddn.com/pictures/ipython.png)
+
+在命令行中输入`pip install ipython`[[3]](附注)，然后就静静地等待安装完成。接着，在命令行中输入`ipython`，就能看到如下的界面。一个命令即可安装ipython，大家是不是感受到了pip包管理工具的强大之处。
+
+## 结语
+
+* 去官网下载最新的安装包
+* 在系统命令行输入`python`进入python命令行
+* 安装python包的命令是：`pip  install`
+
+今天我们简单介绍了python的安装，明天将会介绍python的基础知识。欢迎大家关注公众号：聪哥python，您的支持是我创作力量的源泉。
+
+![聪哥python](http://opa63tcx6.bkt.clouddn.com/qrcode%E8%81%AA%E5%93%A5python.jpg)
+
+
+
+## 附注
+
+1. 一般来说，Mac和各种linux/UNIX系统都自带python，不需要安装。
+2. 对于python2和python3共存的系统，如Mac和ubuntu，想要进入python3的命令行，只要在系统自带的命令行中输入`python3`。在ubuntu中安装pip，只需要输入命令：`sudo apt-get install python3-pip`。
+3. python分为2和3两个共存的版本，那么对应的pip也分2和3两个共存的版本。如果我们的电脑里既有python2有python3，那么想要使用python3的pip安装ipython，应该使用如下命令：`pip3 install ipython`。
+
