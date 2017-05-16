@@ -1,0 +1,179 @@
+# python运算符
+
+>今天我们换个口味，讲一讲python的运算符。本文需要用到前面几篇文章的知识，请大家适当回顾前几期文章。
+
+## 算术运算符
+
+算术运算符用于数学运算，和我们在数学中的学习的运算方法基本类似。
+
+| 运算   | 符号   | 示例 (a=5, b=2) | 结果   |
+| ---- | :--- | ------------- | ---- |
+| 加    | +    | a + b         | 7    |
+| 减    | -    | a - b         | 3    |
+| 乘    | *    | a * b         | 10   |
+| 除    | /    | a / b         | 2.5  |
+| 整除   | //   | a // b        | 2    |
+| 取余   | %    | a % b         | 1    |
+| 幂    | **   | a ** b        | 25   |
+
+## 比较运算符
+
+比较运算符连接两个变量或表达式，比较完成后返回一个比较的结果。
+
+>在人们常用布尔值表示真或者假，在python中，用True表示真，用False表示假。特别地，数字0，空字符串和None的布尔值是False，其它的值都是True。
+
+| 运算   | 符号   | 示例 (a=5, b=2) | 结果    |
+| ---- | ---- | ------------- | ----- |
+| 等于   | ==   | a == b        | False |
+| 不等于  | !=   | a != b        | True  |
+| 大于   | >    | a > b         | True  |
+| 大于等于 | >=   | a >= b        | True  |
+| 小于   | <    | a < b         | False |
+| 小于等于 | <=   | a <=b         | False |
+
+
+
+## 逻辑运算符
+
+基本逻辑就三种：与、或、非。因此，逻辑运算符也只有三种，分别是`and`、`or`和`not`。下表给出了各种逻辑的运算结果，注意比较 and 和 or 的区别。
+
+| 条件1   | 逻辑运算 | 条件2   | 结果    |
+| ----- | ---- | ----- | ----- |
+| True  | and  | True  | True  |
+| True  | and  | False | False |
+| False | and  | False | False |
+| True  | or   | True  | True  |
+| True  | or   | Fal   | True  |
+| False | or   | False | False |
+| True  | not  |       | False |
+| False | not  |       | True  |
+
+两个量在 and 操作之后，会返回两种结果。如果两个量都是True，则返回第二个量的值；如果有一个量不是True，则返回布尔值False。
+
+两个量在 or 操作之后，也有两种结果。如果两个量都是False，则返回布尔值False；如果有一个量不是False，则返回第一个布尔值不是False的量的值。有点复杂，大家看一个示例就明白了[[2]](##参考资料)。
+
+not只作用与一个量，返回一个布尔值。如果这个量是True，则返回False；反之，返回True。
+
+```python
+>>> 1 and 2
+2
+>>> 1 or 2
+1
+>>> 0 and 1
+False
+>>> 0 or 1
+1
+>>> not 0
+True
+>>> not 1
+False
+```
+
+
+
+## 其它运算符
+
+赋值运算符 =，将运算符左边的值给右边的变量。大家应该比较熟悉了，不过要注意：它和比较运算符`==`的区别。
+
+成员运算符 in，判定一个元素是否在列表、元组或者字典中，循环中用得比较多。如果存在，则返回True，反之，返回False。
+
+```python
+>>> fruits = ['apple', 'banana', 'grape', 'orange', 'pear']
+>>> 'apple' in fruits
+True
+>>> 'peach' in fruits
+False
+>>> scores = { 'Chinese': 90, 'Mathematics': 85, 'English': 93}
+>>> 'Chinese' in scores
+True
+>>> 'Programme' in scores
+False
+```
+
+身份运算符 is，判定两个变量是否出自同一个存储单元。这句话比较抽象，我们可以用函数`id()`来获取存储单元的编号[[2]](##参考资料)。两个变量只有在id相同的时候，身份运算 is 才返回 True。
+
+```python
+>>> fruits_1 = ['apple', 'banana', 'grape', 'orange', 'pear']
+>>> fruits_2 = ['apple', 'banana', 'grape', 'orange', 'pear']
+>>> id(fruits_1)
+1000001
+>>> id(fruits_2)
+1000002
+>>> fruits_1 is fruits_2
+False
+>>> fr = fruits_1
+>>> id(fr)
+1000001
+>>> fr is fruits_1
+True
+```
+
+
+
+## 总结
+
+* 算术运算符，和数学中学过得运算符基本类似
+* 比较运算符，比较两个表达式的值，返回布尔值
+* 逻辑运算符，有一定规律，返回值也相对复杂
+* 各个运算符得优先级：算术运算符 > 比较运算符 > 其它运算符 > 逻辑运算符
+
+
+
+## 思考
+
+
+
+```python
+
+# 问题
+# 思考下面这三个表达式的返回结果
+>>> 2 and '0'
+>>> '1' in (1,2,3,4) and 'apple' in ['apple', 'banana', 'grape']
+>>> 0 is False or 1 == True
+
+# 答案
+'0'
+False
+True
+
+```
+
+
+
+## 参考资料
+
+1. 《Python中布尔类型》，原文链接：http://www.cnblogs.com/521yywzyzhc/p/6264885.html
+2. 《Python中的id函数到底是什么？》原文链接：http://blog.csdn.net/djskl/article/details/25886187
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# python的运算符
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
