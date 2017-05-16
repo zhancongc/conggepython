@@ -2,17 +2,35 @@
 
 > 当我们需要反复做一种操作的时候，为了节省时间，提高效率，需要用到循环语句来简化编程。
 
-## for循环
+## for循环基本形式
 
 当循环的条件和某个序列有关时，就适合使用for循环。for循环中，for和in都是python保留的关键字，for是循环的标识，in是成员运算符。代码块中的内容是需要循环执行的。
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViaoNDjiaAknR6q5uicVicv0YGBM6MVMQfOascet3mV3eG1LIeiauHUQicqgM7A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+```python
+# for循环的基本形式
+for 索引 in 序列:
+    代码块
+
+# 示例
+fruits = ['apple', 'banana', 'grape', 'orange', 'pear']
+for index in fruits:
+    print(index)
+```
 
 上面的例子，实现的功能是：按顺序打印列表fruits中的元素。其中的index是自定义的一个变量，将index改成其它的名字，也不会影响程序的输出（python保留的关键词除外）。循环时依次将fruits中的元素赋值给index，每赋值一次执行一次代码块。
 
 字符串之所以是序列，是因为它的每个字符都可以看作是一个元素，并且和列表一样自带索引。实际上，字符串可以看作是一个列表，这个列表的元素都是一个字符。对于字典而言，它的键是也是一个序列。因此，字符串和字典都可以实现for循环。
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViaohCGUwYOjHGbIq4mpIXQp8fKY9UFicMYh8vvKDTr2wlmHeqcaCCOeicgQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+```python
+# 字符串
+sign = "Welcome to congge python!"
+for index in sign:
+    print(index)
+# 字典
+scores = {'Chinese':90, 'Mathematics':85, 'English':93}
+for index in scores:
+    print(scores[index])
+```
 
 ## 高级应用
 
@@ -22,13 +40,28 @@
 
 配合函数range()和len()，生成一个索引元组，便于自定义循环的范围。
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViaoQjWvx7BUd6nicAd7le5Hv2mSnAEBVUklEd5gF028RuOBPCjPiaOibAJUw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+```python
+fruits = ['apple', 'banana', 'grape', 'orange', 'pear']
+# 输出序号1到3的所有fruits元素
+for index in range(1,4):
+    print(index)
+# 输出序号2开始的所有fruits元素
+for index in range(2,len(fruits)):
+    print(index)
+```
 
 上面两个循环语句的输出结果分别是：banana, grape, orange 和 grape, orange, pear。看懂了吗？
 
 配合if语句，实现更高级的操作。比如：统计"Welcome to congge python!"中的字母"o"的个数。
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViaouJ16gZB3hYYtUMdBE8n0X0ucicuFiclAlvtsBEEmj1ypwlwQmDL8FsiaA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+```python
+sign = "Welcome to congge python!"
+number = 0
+for index in sign:
+    if index == "o":
+        number = number + 1
+    print(number)
+```
 
 > break语句，用于跳出本级循环。循环中一旦执行到break语句，循环立刻中止。
 >
@@ -36,13 +69,36 @@
 
 配合break和continue语句，实现循环的高级控制。比如：统计各门科目的平均分，如果没有分数则循环中止。
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViao7JUoTWiayqcZhDkwmpyadTIicZETsPEgxNy5ouIVhwo9AyCib9MvMy2Vw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+```python
+scores = {'Chinese':90, 'Mathematics':None, 'English':93}
+# 总分
+total = 0
+for index in scores:
+    if scores[index] is None:
+        break
+    total = total + scores[index]
+# 平均分 = 总分/科目数
+average = total/len(scores)
+print(scores[index])
+```
 
 此时，total的值应该是90，而average的值是错的。大家可以尝试将`scores['Mathematics']`的值改成85，这样就能正常地计算出平均分。
 
 对于此例，还有一种for-else循环可以使用。这时的for循环和正常的for循环没有任何区别，区别在于：当循环没有没有异常地执行完毕时，再执行else部分的代码块。到目前为止，这种异常仅限于break语句。
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViaoIwVwARYaKzvUMiaEiby0r7dOR1MWiawYsV6iaplFY2hCzbe7AIqfPM8xsg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+```python
+scores = {'Chinese':90, 'Mathematics':None, 'English':93}
+# 总分
+total = 0
+for index in scores:
+    # 如果这门课没有分，则循环终止
+    if scores[index] is None:
+        break
+    total = total + scores[index]
+else:
+	average = total/len(scores)
+	print(scores[index])
+```
 
 一般来说，else部分用于与循环相关的后处理。
 
@@ -57,10 +113,36 @@
 
 本期思考：
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViaoykQGRdQAb1gdTNGcxeYCtdavOWaSN6UcelyjURXCyibyRIMoiaKhC3Zg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+```python
+# 数学中我们学过质数的概念
+# 质数的特征是：只能被1和它本身整除
+# 例如：2是质数，它只能被1和2整除
+# 4不是质数，它可以被1、2和4整除
+# 1.请编写一个程序判定一个数是否是质数
+# 2.请编写一个程序找出1~100之间的所有质数
+```
 
 上期答案：
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVrdNK3VAPXFcNATf8OmRrhbIJ9v7LElA55ByaDYwjADBdVVzrSu6eicicgBtGlib7ic6SLPsv9uYnDszA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+```python
+# 假设分数为score，分数的取值范围是0~100
+# 分数大于或等于90为优
+# 分数小于90但大于或等于75为良
+# 分数小于75但大于或等于60为中
+# 分数小于60为差
+# 请编写一个程序判断优良中差
+```
 
-![img](http://mmbiz.qpic.cn/mmbiz_png/yQOGaRouhVp0HzEtA6r7wULK3UCPWViaoETUGcw9dUcnupoeX0ApztaemfY6sCwgNic4S9WAfZnoYcUVTtKGmmyw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+上期问题解答：
+
+```python
+# 参考答案
+if score >= 90 and score <= 100:
+    print("优")
+elif score >= 75 and score < 90:
+    print("良")
+elif score >= 60 and score < 75:
+    print("中")
+elif score >=0 and score < 60:
+    print("差")
+```
