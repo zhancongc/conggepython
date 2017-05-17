@@ -84,7 +84,7 @@ print(scores[index])
 
 此时，total的值应该是90，而average的值是错的。大家可以尝试将`scores['Mathematics']`的值改成85，这样就能正常地计算出平均分。
 
-对于此例，还有一种for-else循环可以使用。这时的for循环和正常的for循环没有任何区别，区别在于：当循环没有没有异常地执行完毕时，再执行else部分的代码块。到目前为止，这种异常仅限于break语句。
+对于此例，还有一种for-else循环可以使用。for-else中的for循环和正常的for循环没有任何区别，差别在于else部分。当循环没有没有异常地执行完毕时，再执行else部分的代码块。到目前为止，这种异常仅限于break语句。
 
 ```python
 scores = {'Chinese':90, 'Mathematics':None, 'English':93}
