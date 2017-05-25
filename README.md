@@ -1,6 +1,6 @@
 # 聪哥python
 
-python基础教程
+python入门教程
 
 ## 目录
 1. [前言](https://github.com/zhancongc/conggepython/blob/master/01-%E5%89%8D%E8%A8%80.md)
@@ -13,11 +13,11 @@ python基础教程
 8. [for循环](https://github.com/zhancongc/conggepython/blob/master/08-for%E5%BE%AA%E7%8E%AF.md)
 9. [while循环](https://github.com/zhancongc/conggepython/blob/master/09-while%E5%BE%AA%E7%8E%AF.md)
 10. [函数1](https://github.com/zhancongc/conggepython/blob/master/10-%E5%87%BD%E6%95%B01.md)
-11. [函数2]()
-12. [字符串与文本处理]()
-13. [正则表达式]()
-14. [列表2]()
-15. [类1]()
+11. [函数2](https://github.com/zhancongc/conggepython/blob/master/11-%E5%87%BD%E6%95%B02.md)
+12. [字符串与文本处理](https://github.com/zhancongc/conggepython/blob/master/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86.md)
+13. [正则表达式](https://github.com/zhancongc/conggepython/blob/master/13-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
+14. [列表2](https://github.com/zhancongc/conggepython/blob/master/14-%E5%88%97%E8%A1%A82.md)
+15. [类1](https://github.com/zhancongc/conggepython/blob/master/15-%E7%B1%BB1.md)
 16. 类2
 17. 异常处理
 18. 文件与IO
