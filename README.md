@@ -13,11 +13,11 @@ python基础教程
 8. [for循环](https://github.com/zhancongc/conggepython/blob/master/08-for%E5%BE%AA%E7%8E%AF.md)
 9. [while循环](https://github.com/zhancongc/conggepython/blob/master/09-while%E5%BE%AA%E7%8E%AF.md)
 10. [函数1](https://github.com/zhancongc/conggepython/blob/master/10-%E5%87%BD%E6%95%B01.md)
-11. 函数2
-12. 字符串与文本处理
-13. 正则表达式
-14. 字典与json
-15. 类1
+11. [函数2]()
+12. [字符串与文本处理]()
+13. [正则表达式]()
+14. [列表2]()
+15. [类1]()
 16. 类2
 17. 异常处理
 18. 文件与IO
