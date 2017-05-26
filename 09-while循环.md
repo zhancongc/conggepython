@@ -71,8 +71,6 @@ else:
 
 ## 思考
 
-本期思考题：
-
 ```python
 # 自然数集中，由小到大，
 # 2是第一个质数，3是第二个质数，5是第三个质数，
@@ -93,7 +91,7 @@ while num <= 100:
 print(number-1)
 ```
 
-print()语句可以用来调试代码，使用`print(num, number)`可以帮助我们知晓质数的编号。
+> print()语句可以用来调试代码，使用`print(num, number)`可以帮助我们知晓质数的编号。
 
 **扫一扫这个二维码，关注公众号：聪哥python，获取最新python3基础教程**
 ![聪哥python](http://opa63tcx6.bkt.clouddn.com/qrcode%E8%81%AA%E5%93%A5python.jpg)
