@@ -18,7 +18,7 @@ python入门教程
 13. [正则表达式](https://github.com/zhancongc/conggepython/blob/master/13-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
 14. [列表2](https://github.com/zhancongc/conggepython/blob/master/14-%E5%88%97%E8%A1%A82.md)
 15. [类1](https://github.com/zhancongc/conggepython/blob/master/15-%E7%B1%BB1.md)
-16. 类2
-17. 异常处理
-18. 文件与IO
-19. 模块
+16. [类2](https://github.com/zhancongc/conggepython/blob/master/16-%E7%B1%BB2.md)
+17. [异常处理](https://github.com/zhancongc/conggepython/blob/master/17-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86.md)
+18. [文件与IO](https://github.com/zhancongc/conggepython/blob/master/18-%E6%96%87%E4%BB%B6%E4%B8%8EIO.md)
+19. [模块和包](https://github.com/zhancongc/conggepython/blob/master/19-%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85.md)
