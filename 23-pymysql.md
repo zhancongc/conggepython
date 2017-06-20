@@ -123,7 +123,7 @@ finally:
     connection.close()
 ```
 
-更多操作请参考pymysql的官方文档。
+更多操作请参考pymysql的[官方文档](https://pymysql.readthedocs.io/en/latest/)。
 
 ## 总结
 
