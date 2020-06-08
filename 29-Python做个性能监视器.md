@@ -6,15 +6,15 @@
 
 数据来源：psutil
 
-方案：
-
-记录一段时间内的CPU使用率，并计算平均值，绘制CPU性能曲线。
-
 安装matplotlib和psutil
 
 ```shell
 $ pip install -i https://pipy.douban.com/simple matplotlib psutil
 ```
+
+方案：
+
+记录一段时间内的CPU使用率，并计算平均值，绘制CPU性能曲线。
 
 固定次数
 
@@ -69,3 +69,25 @@ while datetime.now() < future_time:
 plt.savefig("./cpu_percent.png")
 ```
 
+方案：
+
+记录一段时间内的内存使用率，并计算平均值，绘制内存占用曲线。
+
+```python
+memory_list = list()
+interval = timedelta(seconds=30)
+total_memory = round(ps.virtual_memory().total/1024**3)
+current_time = datetime.now()
+future_time = current_time + interval
+while datetime.now() < future_time:
+    memory_list.append(ps.virtual_memory().percent)
+    plt.clf()
+    average_memory_percent = sum(memory_list)/len(memory_list)
+    plt.title("Memory performance, average: {0}%, total: {1}GB.".format(round(average_memory_percent), total_memory))
+    plt.xlabel("times")
+    plt.ylabel("cpu percent(%)")
+    plt.ylim(0, 100)
+    plt.plot(memory_list)
+    plt.pause(0.1)
+plt.savefig("./memory_percent.png")
+```
